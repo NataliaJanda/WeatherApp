@@ -45,7 +45,7 @@ function WeatherTable() {
             if (location.latitude && location.longitude) {
                 setLoading(true);
                 try {
-                    const response = await axios.get(`http://localhost:8080/weather`, {
+                    const response = await axios.get(`https://weatherapp-3-c1iu.onrender.com/weather`, {
                         params: {
                             latitude: parseFloat(location.latitude.toFixed(6)),
                             longitude: parseFloat(location.longitude.toFixed(6))
