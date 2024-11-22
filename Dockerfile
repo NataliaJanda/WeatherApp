@@ -2,7 +2,7 @@
 FROM eclipse-temurin:17-jdk-jammy AS backend-build
 WORKDIR /Backend
 COPY Backend ./
-RUN ./mvnw package -DskipTests
+RUN ./gradlew build -x test
 
 FROM node:18 AS frontend-build
 WORKDIR /Frontend
